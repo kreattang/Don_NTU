@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import json
 import xmltodict
-from detection_URL import is404
+from detection import detector
 
 
 def xml2json(file_name):
@@ -14,18 +14,8 @@ def xml2json(file_name):
     for _ in member:
         total_member = total_member +1
         if 'referenceLink' in _:
-            ref = ref + 1
-            try:
-                if 'nvd' in _['referenceLink']:
-                    nvd = nvd + 1
-                else:
-                    non_nvd = non_nvd + 1
-                # url = str(_['referenceLink'])
-                # if is404(url) == True:
-                #     print(url)
-            except:
-                print('<referenceLink> data ERROR!')
-            
-    return total_member, ref, nvd, non_nvd
+            url = _['referenceLink']
+            print("链接：", detector(url), url)
 
+    # return total_member, ref, nvd, non_nvd
 # print(xml2json('2017-03-20_2017-03-26.xml'))
