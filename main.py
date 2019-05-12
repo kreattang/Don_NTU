@@ -8,7 +8,8 @@ from  read_all_xml import Get_all_name
 from  xml_to_json import xml2json
 from detection import detector
 
-filePath = 'I:/PycharmProjects/NTU_CNVD/CNVD_dataset'
+filePath = '/home/wenbing/Desktop/Don_NTU/CNVD_dataset'
 names = Get_all_name(filePath)
-for name in names:
+# print(names)
+for name in names[1:]:
     xml2json(name)
