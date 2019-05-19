@@ -220,9 +220,9 @@ def main(P1, P2, P3, P4, P5):
 
 
 if __name__ == '__main__':
-    collision_times = 0
+    collision_times = []
     Sep_metric, Tra_metric, Time_metric = [], [], []
-    for i in range(100):
+    for i in range(50):
         print("第{}次".format(str(i+1)))
 
 
@@ -254,8 +254,7 @@ if __name__ == '__main__':
             Sep_metric.append(Sep)
             Tra_metric.append(Tra)
             Time_metric.append(Time)
-            if Sep_metric < 24:
-                collision_times = collision_times + 1
+            collision_times.append(Sep)
         except:
             print("运行出错！")
             turtle.clearscreen()

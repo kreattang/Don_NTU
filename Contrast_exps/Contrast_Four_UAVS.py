@@ -219,8 +219,9 @@ def main(P1, P2, P3, P4):
 
 
 if __name__ == '__main__':
+    collision_times = []
     Sep_metric, Tra_metric, Time_metric = [], [], []
-    for i in range(100):
+    for i in range(50):
         print("第{}次".format(str(i+1)))
         UAV1_start_x, UAV1_start_y = random.randint(-300, -200), random.randint(200, 300)
         UAV1_target_x, UAV1_target_y = random.randint(200, 300), random.randint(-300, -200)
@@ -241,11 +242,13 @@ if __name__ == '__main__':
                      [[UAV2_start_x, UAV2_start_y], [UAV2_target_x, UAV2_target_y]], \
                      [[UAV3_start_x, UAV3_start_y], [UAV3_target_x, UAV3_target_y]], \
                      [[UAV4_start_x, UAV4_start_y], [UAV4_target_x, UAV4_target_y]])
+
             Sep_metric.append(Sep)
             Tra_metric.append(Tra)
             Time_metric.append(Time)
         except:
             print("运行出错！")
             turtle.clearscreen()
-
+    collision_times.append(Sep)
+    print("碰撞次数：", collision_times)
     print("平均度量：", round(sum(Sep_metric)/len(Sep_metric), 3), round(sum(Tra_metric)/len(Tra_metric), 3), round(sum(Time_metric)/len(Time_metric), 3))

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5adc7cb9-d4d4-4c51-bfa5-457fe4d310eb" name="wenbing@CSL" url="http://155.69.149.133">
+        <fileTransfer host="155.69.149.133" port="22" rootFolder="/home/wenbing" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
