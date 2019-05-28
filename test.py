@@ -4,6 +4,7 @@
 # @Author  : tang
 # @File    : test.py
 
-import requests
-
-r = requests.get('http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1145')
+array = [0, 0, 0]
+matrix = [array] * 2
+matrix[0] = [1,2,3]
+print(matrix)
